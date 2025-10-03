@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fahrul Motret - Grad Photo Package</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400;500&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fafafa;
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(255,255,255,0.95), rgba(255,255,255,0.95)), url('http://static.photos/white/1200x630/12');
+            background-size: cover;
+            background-position: center;
+        }
+        .price-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+        }
+        .discount-badge {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body class="text-gray-700">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <i data-feather="camera" class="text-purple-500 mr-2"></i>
+                <h1 class="text-xl font-bold text-gray-800">Fahrul Motret</h1>
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#" class="text-purple-600 font-medium">Home</a>
+                <a href="#" class="hover:text-purple-600">Gallery</a>
+                <a href="#" class="hover:text-purple-600">About</a>
+                <a href="#" class="hover:text-purple-600">Contact</a>
+            </div>
+            <button class="md:hidden">
+                <i data-feather="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6 text-gray-800 font-serif">Raih Foto Wisuda Impianmu</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">Abadikan momen spesialmu dengan foto wisuda berkualitas profesional</p>
+            <div class="relative inline-block">
+                <span class="discount-badge absolute -top-4 -right-4 bg-purple-600 text-white px-4 py-1 rounded-full text-sm font-bold">Diskon Spesial!</span>
+                <a href="#pricing" class="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-full font-medium inline-block transition duration-300">Lihat Paket Harga</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4 text-gray-800 font-serif">Paket Foto Wisuda</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Harga spesial untuk mahasiswa. Semakin banyak orang yang memesan, semakin besar diskon yang Anda dapatkan!</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Basic Package -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transition duration-300 price-card">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Paket Basic</h3>
+                        <p class="text-gray-600 mb-4">Untuk 1 orang</p>
+                        <div class="mb-4">
+                            <span class="text-4xl font-bold text-purple-600">Rp400rb</span>
+                            <span class="text-gray-500 line-through ml-2">Rp600rb</span>
+                        </div>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-start">
+                                <i data-feather="check" class="text-green-500 mr-2"></i>
+                                <span>Maksimal 150 Foto</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-feather="check" class="text-green-500 mr-2"></i>
+                                <span>bebas lokasi shooting</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-feather="check" class="text-green-500 mr-2"></i>
+                                <span>Lebih dari 1 outfit</span>
+                            </li>
+                        </ul>
+                        <a href="#" class="block text-center bg-gray-100 hover:bg-gray-200 text-gray-800 px-4 py-2 rounded-lg font-medium transition duration-300">Pesan Sekarang</a>
+                    </div>
+                </div>
+
+                <!-- Group Package -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 price-card border-2 border-purple-500 transform scale-105">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-xl font-bold mb-2 text-gray-800">Paket Group</h3>
+                                <p class="text-gray-600 mb-4">2-5 orang</p>
+                            </div>
+                            <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full font-bold">POPULAR</span>
+                        </div>
+                        <div class="mb-4">
+                            <span class="text-4xl font-bold text-purple-600">Rp350rb</span>
+                            <span class="text-gray-500 line-through ml-2">Rp500rb</span>
+                            <span class="block text-sm text-purple-600 mt-1">Hemat Rp50rb/orang</span>
+                        </div>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-start">
+                                <i data-feather="check" class="text-green-500 mr-2"></i>
+                                <span>70 Foto/Orang</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-feather="check" class="text-green-500 mr-2"></i>
+                                <span>bebas lokasi shooting</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-feather="check" class="text-green-500 mr-2"></i>
+                                <span>lebih dari 1 outfit</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-feather="check" class="text-green-500 mr-2"></i>
+                                <span>Foto bersama group</span>
+                            </li>
+                        </ul>
+                        <a href="#" class="block text-center bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg font-medium transition duration-300">Pesan Sekarang</a>
+                    </div>
+                </div>
+
+                <!-- Big Group Package -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transition duration-300 price-card">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Paket Big Group</h3>
+                        <p class="text-gray-600 mb-4">6+ orang</p>
+                        <div class="mb-4">
+                            <span class="text-4xl font-bold text-purple-600">Rp300rb</span>
+                            <span class="text-gray-500 line-through ml-2">Rp400rb</span>
+                            <span class="block text-sm text-purple-600 mt-1">Hemat Rp100rb/orang</span>
+                        </div>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-start">
+                                <i data-feather="check" class="text-green-500 mr-2"></i>
+                                <span>maksimal 150 foto</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-feather="check" class="text-green-500 mr-2"></i>
+                                <span>2 lokasi shooting</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-feather="check" class="text-green-500 mr-2"></i>
+                                <span>3 outfit</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-feather="check" class="text-green-500 mr-2"></i>
+                                <span>Foto bersama group</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-feather="check" class="text-green-500 mr-2"></i>
+                                <span>Bingkai foto digital</span>
+                            </li>
+                        </ul>
+                        <a href="#" class="block text-center bg-gray-100 hover:bg-gray-200 text-gray-800 px-4 py-2 rounded-lg font-medium transition duration-300">Pesan Sekarang</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 bg-white rounded-xl shadow-sm p-6 max-w-3xl mx-auto">
+                <h3 class="text-xl font-bold mb-4 text-center text-gray-800">Info Tambahan</h3>
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <i data-feather="dollar-sign" class="text-purple-500 mr-3 mt-1"></i>
+                        <div>
+                            <h4 class="font-medium text-gray-800">Potongan Harga Tambahan</h4>
+                            <p class="text-gray-600">Untuk kelompok lebih dari 10 orang, dapatkan potongan harga tambahan hingga Rp200rb per orang! Hubungi kami untuk penawaran khusus.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="calendar" class="text-purple-500 mr-3 mt-1"></i>
+                        <div>
+                            <h4 class="font-medium text-gray-800">Booking Jadwal</h4>
+                            <p class="text-gray-600">Disarankan booking minimal 2 minggu sebelum hari H untuk mendapatkan slot terbaik. Pembayaran 50% di awal sebagai DP.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="image" class="text-purple-500 mr-3 mt-1"></i>
+                        <div>
+                            <h4 class="font-medium text-gray-800">Proses Editing</h4>
+                            <p class="text-gray-600">Hasil foto akan dikirim via WA atau Google Drive dalam 1 hari kerja setelah sesi foto. Revisi minor gratis maksimal 2x.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-purple-600 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6 font-serif">Siap Abadikan Momen Wisudamu?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Diskon spesial terbatas hanya sampai akhir bulan ini!</p>
+            <a href="#" class="inline-block bg-white text-purple-600 hover:bg-gray-100 px-8 py-3 rounded-full font-medium transition duration-300">Hubungi Kami Sekarang</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i data-feather="camera" class="text-purple-500 mr-2"></i>
+                        <h3 class="text-xl font-bold text-white">Fahrul Motret</h3>
+                    </div>
+                    <p class="mb-4">Spesialis foto wisuda dengan kualitas profesional dan harga terjangkau.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-feather="instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-feather="facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-feather="twitter"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-4">Kontak</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i data-feather="phone" class="mr-2 mt-1"></i>
+                            <span>+62 823-3037-4036</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="mail" class="mr-2 mt-1"></i>
+                            <span>fahrulmjaban@gmail.com</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="map-pin" class="mr-2 mt-1"></i>
+                            <span>Ternate, Maluku Utara</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-4">Jam Operasional</h4>
+                    <ul class="space-y-2">
+                        <li class="flex justify-between">
+                            <span>Senin-Minggu</span>
+                            <span>07:00 - Selesai</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Sabtu</span>
+                            <span>08:00 - selesai</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Minggu</span>
+                            <span>08:00 - selesai</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p>&copy; 2023 Fahrul Motret. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        feather.replace();
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
